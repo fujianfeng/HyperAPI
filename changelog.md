@@ -1,6 +1,14 @@
 # HyperAPI Changelog
 
 ## Version 7
+### 7.0.6
+- Adding Route `sendPayload`
+    - Available since HDP 4.2.8
+    - POST `/anaplan/send`
+
+- Adding Route `getImports`
+    - Available since HDP 4.2.8
+    - GET `/anaplan/workspaces/{workspace_id}/model/{model_id}/imports/{dataset_Id}`
 
 ### 7.0.5
 - Adding Route `getAllRealtimeViz`
