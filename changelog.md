@@ -1,6 +1,10 @@
 # HyperAPI Changelog
 
 ## Version 7
+
+### 7.0.8
+- Using string delimiters when creating datasets in mongo
+
 ### 7.0.6
 - Adding Route `sendPayload`
     - Available since HDP 4.2.8
