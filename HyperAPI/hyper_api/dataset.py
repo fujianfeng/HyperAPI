@@ -14,6 +14,9 @@ from HyperAPI.hyper_api.ruleset import RulesetFactory
 class DatasetFactory:
     """
     """
+    string_delimiters = ["semicolon", "comma", "tab", "pipe"]
+    char_delimiters = [";", ",", "\t", "|"]
+
     def __init__(self, api, project_id):
         self.__api = api
         self.__project_id = project_id
@@ -53,6 +56,13 @@ class DatasetFactory:
         else:
             discreteDict_file_name = None
         selectedSheet = max(1, selectedSheet)
+
+        # historically, delimiter/separator were stored as explicit strings in our database (ex: "semicolon")
+        # we want to keep it that way
+        if delimiter in self.char_delimiters:
+            delimiter = self.string_delimiters[self.char_delimiters.index(delimiter)]
+        elif delimiter not in self.string_delimiters:
+            raise ApiException(f'Unsupported value for delimiter: {delimiter}', f'Supported values: {self.string_delimiters}')
 
         data = {
             'name': name,
@@ -164,7 +174,7 @@ class DatasetFactory:
         metadata_file_name = '{}.json'.format(uuid.uuid4())
         discreteDict_file_name = '{}.json'.format(uuid.uuid4())
         DECIMAL = "."
-        SEPARATOR = ";"
+        SEPARATOR = "semicolon"
         ENCODING = "utf-8"
 
         stream_df = io.StringIO(dataframe.to_csv(sep=SEPARATOR, index=False))
@@ -250,7 +260,7 @@ class DatasetFactory:
             Dataset
         """
         project_id = self.__project_id
-        SEPARATOR = ";"
+        SEPARATOR = "semicolon"
         ENCODING = "utf-8"
 
         dataset_data = {
