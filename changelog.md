@@ -2,7 +2,7 @@
 
 ## Version 7
 
-### 7.0.9
+### 7.0.10
 - Adding Route `getPosRecurrences`
     - Available since HDP 4.2.10
     - POST `/nitro/projects/{project_ID}/datasets/{dataset_ID}/pos/recurrences`
