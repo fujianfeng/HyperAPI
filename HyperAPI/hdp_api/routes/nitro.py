@@ -221,18 +221,18 @@ class Nitro(Resource):
         }
 
     class _getPosRecurrence(Route):
-        name = "getPosRecurrence"
+        name = "getPosRecurrences"
         httpMethod = Route.POST
-        available_since = "4.4"
-        path = "/nitro/projects/{project_ID}/posRecurrence"
+        available_since = "4.2.10"
+        path = "/nitro/projects/{project_ID}/posRecurrences"
         _path_keys = {
             'project_ID': Route.VALIDATOR_OBJECTID
         }
     class _updatePosRecurrence(Route):
         name = "updatePosRecurrence"
         httpMethod = Route.POST
-        available_since = "4.4"
-        path = "/nitro/projects/{project_ID}/posRecurrence/{pos_ID}"
+        available_since = "4.2.10"
+        path = "/nitro/projects/{project_ID}/posRecurrences/{pos_ID}"
         _path_keys = {
             'project_ID': Route.VALIDATOR_OBJECTID,
             'pos_ID': Route.VALIDATOR_OBJECTID
