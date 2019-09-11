@@ -220,20 +220,23 @@ class Nitro(Resource):
             'forecast_ID': Route.VALIDATOR_OBJECTID
         }
 
-    class _getPosRecurrence(Route):
+    class _getPosRecurrences(Route):
         name = "getPosRecurrences"
         httpMethod = Route.POST
         available_since = "4.2.10"
-        path = "/nitro/projects/{project_ID}/posRecurrences"
+        path = "/nitro/projects/{project_ID}/datasets/{dataset_ID}/pos/recurrences"
         _path_keys = {
-            'project_ID': Route.VALIDATOR_OBJECTID
+            'project_ID': Route.VALIDATOR_OBJECTID,
+            'dataset_ID': Route.VALIDATOR_OBJECTID
         }
+
     class _updatePosRecurrence(Route):
         name = "updatePosRecurrence"
         httpMethod = Route.POST
         available_since = "4.2.10"
-        path = "/nitro/projects/{project_ID}/posRecurrences/{pos_ID}"
+        path = "/nitro/projects/{project_ID}/datasets/{dataset_ID}/pos/{pos_ID}/recurrences"
         _path_keys = {
             'project_ID': Route.VALIDATOR_OBJECTID,
+            'dataset_ID': Route.VALIDATOR_OBJECTID,
             'pos_ID': Route.VALIDATOR_OBJECTID
         }
