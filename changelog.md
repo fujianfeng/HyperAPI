@@ -38,6 +38,16 @@
 ### 7.0.4
 - Adding Perceptron Model
 
+### 7.0.3
+
+- Adding Route `getForecastIdMetadata`
+    - Available since HDP 4.2.9
+    - GET `/nitro/projects/{project_ID}/datasets/{dataset_ID}/forecasts/{forecast_ID}/metadata`
+
+- Deprecated route `getForecastMetadata`
+    - Starting from HDP 4.2.9
+    - Superseded by `getForecastIdMetadata`
+    
 ### 7.0.2
 - Adding Route `getWorkspaces`
     - Available since HDP 4.2.6
