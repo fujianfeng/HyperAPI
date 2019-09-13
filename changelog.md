@@ -10,6 +10,8 @@
 - Adding Route `updatePosRecurrence`
     - Available since HDP 4.2.10
     - POST `/nitro/projects/{project_ID}/datasets/{dataset_ID}/pos/{pos_ID}/recurrences`
+### 7.0.9 
+- Adding Time Series Forecasting Model
 
 ### 7.0.8
 - Using string delimiters when creating datasets in mongo
