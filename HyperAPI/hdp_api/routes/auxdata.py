@@ -52,6 +52,7 @@ class AuxData(Resource):
 
     class _exportAuxData(Route):
         name = "exportAuxData"
+        removed_since = "4.2.12"
         httpMethod = Route.GET
         path = "/projects/{project_ID}/auxdata/{auxdata_ID}/export"
         _path_keys = {

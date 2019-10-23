@@ -2,6 +2,22 @@
 
 ## Version 6
 
+
+### 6.0.13
+
+- Adding Routes `exportCreate` and `exportStream`
+    - Available since HDP 4.2.12
+    - POST `/projects/{project_ID}/exports`
+    - GET `/projects/{project_ID}/exports/{export_ID}/stream`
+
+- Removing Routes `exportAuxData` and `streamAuxData`
+    - Superseded by `exportCreate` and `exportStream`
+
+### 6.0.12
+
+- Adding Route `streamAuxData`
+    - Available since HDP 4.2.11
+
 ### 6.0.11
 
 - Adding Route `ExportFile`

@@ -12,6 +12,7 @@ from HyperAPI.hdp_api.routes.datasetReshapes import DatasetReshapes
 from HyperAPI.hdp_api.routes.datasetResources import DatasetResources
 from HyperAPI.hdp_api.routes.docapi import DocApi
 from HyperAPI.hdp_api.routes.exports import Exports
+from HyperAPI.hdp_api.routes.exportService import ExportService
 from HyperAPI.hdp_api.routes.hyperEngines import HyperEngines
 from HyperAPI.hdp_api.routes.joinDatasets import JoinDatasets
 from HyperAPI.hdp_api.routes.kpi import Kpi
@@ -73,6 +74,7 @@ class Router(object):
         DatasetResources,
         DocApi,
         Exports,
+        ExportService,
         HyperEngines,
         JoinDatasets,
         Kpi,
