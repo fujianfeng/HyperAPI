@@ -2,6 +2,11 @@
 
 ## Version 6
 
+### 6.0.14
+
+- Adding Resource `segmentation` and Route `segmentation`
+    - Available since HDP 4.2.13
+    - POST `/projects/{project_ID}/datasets/segmentation`
 
 ### 6.0.13
 
