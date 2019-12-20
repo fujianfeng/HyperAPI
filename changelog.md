@@ -2,6 +2,12 @@
 
 ## Version 6
 
+### 6.0.15
+
+- Adding Route `rateModel`
+    - Available since HDP 4.2.14
+    - POST `/projects/{project_ID}/datasets/rateModel`
+
 ### 6.0.14
 
 - Adding Resource `segmentation` and Route `segmentation`
