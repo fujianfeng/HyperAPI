@@ -16,6 +16,7 @@ from HyperAPI.hdp_api.routes.exportService import ExportService
 from HyperAPI.hdp_api.routes.hyperEngines import HyperEngines
 from HyperAPI.hdp_api.routes.joinDatasets import JoinDatasets
 from HyperAPI.hdp_api.routes.segmentation import Segmentation
+from HyperAPI.hdp_api.routes.distance import Distance
 from HyperAPI.hdp_api.routes.kpi import Kpi
 from HyperAPI.hdp_api.routes.map import Map
 from HyperAPI.hdp_api.routes.nitro import Nitro
@@ -79,6 +80,7 @@ class Router(object):
         HyperEngines,
         JoinDatasets,
         Segmentation,
+        Distance,
         Kpi,
         Map,
         Monitoring,

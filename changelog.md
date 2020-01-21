@@ -2,6 +2,16 @@
 
 ## Version 6
 
+### 6.0.16
+
+- Adding Route `getDistances`
+    - Available since HDP 4.2.15
+    - GET `/projects/{project_ID}/distances`
+
+- Adding Route `setDistances`
+    - Available since HDP 4.2.15
+    - POST `/projects/{project_ID}/distances`
+
 ### 6.0.15
 
 - Adding Route `rateModel`
